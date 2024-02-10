@@ -1,9 +1,9 @@
 <div [ngClass]="{'dark': isDark}" class="h-full w-full">
   <div class="w-full h-full overflow-auto bg-slate-100 dark:bg-slate-950 flex flex-col items-stretch">
-    <app-navbar></app-navbar>
+    <app-navbar class="z-20"></app-navbar>
     <div class="flex-1 grow">
       <router-outlet></router-outlet>
     </div>
-    <app-footer></app-footer>
+    <app-footer class="z-10"></app-footer>
   </div>
 </div>
