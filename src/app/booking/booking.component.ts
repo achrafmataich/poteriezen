@@ -76,16 +76,12 @@ export class BookingComponent implements OnInit {
 
   getHeuresDisponibles(date: string): string[] {
     if (date && date.length > 0) {
-      console.warn(date);
 
       const dateDate: Date = new Date(date);
 
-      console.warn(dateDate.getDay());
 
       const jour = dateDate.getDay();
-      console.warn(jour);
       const creneaux = this.creneauxHoraires.find(c => this.creneauxHoraires.indexOf(c) === jour - 1);
-      console.warn(creneaux);
 
       if (!creneaux) {
         return [];
