@@ -13,8 +13,8 @@ module.exports = {
           light: "#ab8467"
         },
         secondary: {
-          dark: "#e6d8cf",
-          light: "#ab8467"
+          dark: "#aaa",
+          light: "#777"
         }
       }
     },
