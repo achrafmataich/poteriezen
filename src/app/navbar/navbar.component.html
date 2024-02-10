@@ -114,12 +114,11 @@
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-slate-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="">
+                    <span class="sr-only">PoterieZen</span>
+                    <img class="h-8 w-auto" src="assets/img/logo_poterie_zen.png" alt="">
                 </a>
                 <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400"
                     (click)="toggleMenu()">
@@ -130,57 +129,49 @@
                     </svg>
                 </button>
             </div>
-            <div class="mt-6 flow-root">
+            <div class="mt-6 flow-root text-slate-900 dark:text-slate-200">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
                         <div class="-mx-3">
                             <button type="button"
-                                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700"
+                                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700"
                                 aria-controls="disclosure-1" aria-expanded="false">
-                                Product
-                                <!--
-                    Expand/collapse icon, toggle classes based on menu open state.
-  
-                    Open: "rotate-180", Closed: ""
-                  -->
-                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor"
-                                    aria-hidden="true">
+                                <a href="/">Accueil</a>
+
+                                <svg (click)="toggleHomeMenu()" [@rotate]="submenuState" class="h-5 w-5 flex-none"
+                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd"
                                         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
                                         clip-rule="evenodd" />
                                 </svg>
                             </button>
                             <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                            <div class="mt-2 space-y-2" id="disclosure-1">
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Analytics</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Engagement</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Security</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Integrations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Automations</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Watch
-                                    demo</a>
-                                <a href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Contact
-                                    sales</a>
+                            <div *ngIf="isHomeMenuOpen" class="mt-2 space-y-2" id="disclosure-1">
+                                <a href="/gallery"
+                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Gallerie</a>
+                                <a href="/engagement"
+                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Engagement</a>
+                                <a href="/video"
+                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Voir
+                                    la vidéo
+                                </a>
+                                <a href="/contact"
+                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Contactez
+                                    nous
+                                </a>
                             </div>
                         </div>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Features</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Marketplace</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Company</a>
+                        <a href="/about"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">À
+                            propos</a>
+                        <a href="/contact"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Contact</a>
+                        <a href="/booking"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-700">Réservation</a>
                     </div>
                     <div class="py-6">
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:hover:bg-gray-700">Log
-                            in</a>
+                        <app-toggle-button [value]="isDark" [onLabel]="'Yes'" [offLabel]="'No'"
+                            (valueChange)="handleValueChange($event)"></app-toggle-button>
                     </div>
                 </div>
             </div>

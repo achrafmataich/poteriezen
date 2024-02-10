@@ -2,7 +2,7 @@
     <div class="container mx-auto">
         <h1 class="text-3xl font-semibold mb-8 text-principal-light dark:text-principal-dark">Réservez Votre Séance</h1>
 
-        <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md p-6">
+        <div class="bg-white dark:bg-slate-700 rounded-lg overflow-hidden shadow-md p-6">
             <form *ngIf="reservationForm" [formGroup]="reservationForm" (submit)="submitForm()">
 
                 <h2 class="text-xl font-semibold mb-4 text-principal-light dark:text-principal-dark">Sélectionnez la
@@ -43,14 +43,14 @@
 
                     <div *ngFor="let offer of offers"
                         [ngClass]="{'ring-2 ring-principal-light dark:ring-principal-dark': isSelected(offer)}"
-                        class="bg-gray-200 dark:bg-gray-600 rounded-lg p-4">
+                        class="bg-slate-200 dark:bg-slate-600 rounded-lg p-4">
                         <h3 class="text-lg font-semibold mb-2 dark:text-white">{{offer.name}}</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-2">{{offer.description}}</p>
-                        <p class="text-gray-600 dark:text-gray-300 font-bold">Prix : {{ offer.price }}Dhs {{
+                        <p class="text-slate-600 dark:text-slate-300 mb-2">{{offer.description}}</p>
+                        <p class="text-slate-600 dark:text-slate-300 font-bold">Prix : {{ offer.price }}Dhs {{
                             offer.about_the_price ? '*' + offer.about_the_price : ''}}</p>
                         <!-- Ajoutez un bouton pour sélectionner cette offre -->
                         <button [disabled]="isSelected(offer)" (click)="selectOffer(offer)"
-                            class="disabled:bg-slate-400 dark:disabled:bg-slate-500 bg-principal-light hover:bg-principal-dark text-white font-bold py-2 px-4 rounded-full mt-2 transition duration-300">
+                            class="disabled:bg-slate-400 dark:disabled:bg-slate-300 disabled:text-gray-700 dark:disabled:text-gray-500 bg-principal-light hover:bg-principal-dark text-white font-bold py-2 px-4 rounded-full mt-4 transition duration-300">
                             <span *ngIf="isSelected(offer); else notSelected">Choisie</span>
                             <ng-template #notSelected>
                                 <span>Sélectionner</span>
@@ -61,7 +61,7 @@
                 </div>
 
                 <button [disabled]="reservationForm.invalid"
-                    class="disabled:bg-gray-500 bg-principal-light hover:bg-principal-dark text-white font-bold py-2 px-4 rounded-full mt-4 transition duration-300">Réserver</button>
+                    class="disabled:bg-gray-200 dark:disabled:bg-gray-600 disabled:text-gray-900 dark:disabled:text-gray-200 bg-principal-light hover:bg-principal-dark text-white font-bold py-2 px-4 rounded-full mt-4 transition duration-300">Réserver</button>
             </form>
         </div>
 
