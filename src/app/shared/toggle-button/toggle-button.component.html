@@ -1,0 +1,8 @@
+<button class="toggle-button" [disabled]="disabled" (click)="toggle()">
+    <div *ngIf="value; else off">
+        <ng-icon class="text-black dark:text-white" name="ionCloudyNight"></ng-icon>
+    </div>
+    <ng-template #off>
+        <ng-icon class="text-black dark:text-white" name="ionSunny"></ng-icon>
+    </ng-template>
+</button>

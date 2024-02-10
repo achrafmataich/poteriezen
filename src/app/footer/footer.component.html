@@ -1,0 +1,61 @@
+<footer class="bg-white dark:bg-slate-800 p-4 rounded-t-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-4">
+        <div class="flex items-center gap-x-3">
+            <img alt="Logo PoterieZen" class="max-h-16" src="../../assets/img/logo_poterie_zen.png">
+            <span class="text-3xl text-principal-light dark:text-principal-dark">PoterieZen</span>
+        </div>
+        <div class="flex justify-evenly md:justify-center items-center gap-4 md:mt-0 mt-4">
+            <a class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200" routerLink="home"
+                routerLinkActive="active-route">Accueil</a>
+            <a class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200" routerLink="about"
+                routerLinkActive="active-route">À propos</a>
+            <a class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200" routerLink="contact"
+                routerLinkActive="active-route">Contact</a>
+            <a class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-200" routerLink="booking"
+                routerLinkActive="active-route">Réservation</a>
+        </div>
+        <div class="lg:mt-0 mt-4">
+            <label for="mail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Inscris toi à la
+                Newsletter</label>
+            <div class="relative mb-6">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                        <path
+                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                        <path
+                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                    </svg>
+                </div>
+                <div class="flex items-center gap-2">
+
+                    <input type="text" id="mail"
+                        class="grow bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-principal-light focus:border-principal-light block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-principal-dark dark:focus:border-principal-dark"
+                        placeholder="name@domain.com">
+
+                    <button
+                        class="text-principal-light dark:text-principal-dark bg-transparent px-3 py-1 rounded-lg h-full"><ng-icon
+                            class="text-current" name="ionSend"></ng-icon></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="my-3">
+    <div class="flex justify-between items-center gap-4">
+        <span class="text-sm text-gray-700 dark:text-gray-300">Copyright © 2024, PoterieZen.</span>
+        <div class="flex items-center gap-2">
+            <a href=""
+                class="text-gray-700 dark:text-gray-300 hover:text-principal-light dark:hover:text-principal-dark">
+                <ng-icon name="ionLogoFacebook"></ng-icon>
+            </a>
+            <a href=""
+                class="text-gray-700 dark:text-gray-300 hover:text-principal-light dark:hover:text-principal-dark">
+                <ng-icon name="ionLogoInstagram"></ng-icon>
+            </a>
+            <a href=""
+                class="text-gray-700 dark:text-gray-300 hover:text-principal-light dark:hover:text-principal-dark">
+                <ng-icon name="ionLogoTwitter"></ng-icon>
+            </a>
+        </div>
+    </div>
+</footer>
